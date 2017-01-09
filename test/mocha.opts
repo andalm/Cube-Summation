@@ -1,3 +1,2 @@
---require assert
 --reporter spec
 --recursive
