@@ -4,7 +4,7 @@ const Parser = require('../lib/parser');
 const parser = new Parser();
 const assert = require('assert');
 
-describe.only('parser class', () => {
+describe('parser class', () => {
   it('should returns an object with a correct input', () => {
     parser.parse(`2
       4 5
@@ -105,6 +105,18 @@ describe.only('parser class', () => {
         QUERY 1 1 1 1 1 1
         QUERY 1 1 1 2 2 2
         QUERY 2 2 2 2 2 2`);
+     });
+  });
+
+  it('should return an error with empty string', () => {
+    assert.throws(() => {
+      parser.parse('');
+     });
+  });
+
+  it('should return an error with wrong type input', () => {
+    assert.throws(() => {
+      parser.parse(12354);
      });
   });
 });
