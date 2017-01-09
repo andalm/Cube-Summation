@@ -61,7 +61,7 @@ describe('parser class', () => {
      assert.deepEqual(parser.testCases, []);
   });
 
-  it('should return an error with invalid test cases number', () => {
+  it('should returns an error with invalid test cases number', () => {
     assert.throws(() => {
       parser.parse(`a
         4 5
@@ -78,7 +78,7 @@ describe('parser class', () => {
      });
   });
 
-  it('should return an error with invalid command lines', () => {
+  it('should returns an error with invalid command lines', () => {
     assert.throws(() => {
       parser.parse(`2
         4 5
@@ -93,7 +93,7 @@ describe('parser class', () => {
      });
   });
 
-  it('should return an error with wrong command syntax', () => {
+  it('should returns an error with wrong command syntax', () => {
     assert.throws(() => {
       parser.parse(`2
         4 3
@@ -108,13 +108,13 @@ describe('parser class', () => {
      });
   });
 
-  it('should return an error with empty string', () => {
+  it('should returns an error with empty string', () => {
     assert.throws(() => {
       parser.parse('');
      });
   });
 
-  it('should return an error with wrong type input', () => {
+  it('should returns an error with wrong type input', () => {
     assert.throws(() => {
       parser.parse(12354);
      });
