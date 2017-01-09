@@ -1,0 +1,19 @@
+{
+  "name": "cube-summation",
+  "version": "1.0.0",
+  "description": "A solution for Cube Summation in hackerrank",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andalm/Cube-Summation.git"
+  },
+  "author": "Andrés Aldana <andres.aldana.martinez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andalm/Cube-Summation/issues"
+  },
+  "homepage": "https://github.com/andalm/Cube-Summation#readme"
+}
