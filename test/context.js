@@ -52,7 +52,7 @@ describe('context class', () => {
      });
   });
 
-  it('should returns results of last parse input', () => {
+  it('should returns results of last parsed input', () => {
     context.parser.parse(`2
       4 5
       UPDATE 2 2 2 4
