@@ -4,9 +4,7 @@ const Context = require('../lib/context');
 const Parser = require('../lib/parser');
 const Matrix = require('../lib/matrix');
 
-const parser = new Parser();
-const matrix = new Matrix();
-const context = new Context(matrix, parser);
+const context = new Context(new Matrix(), new Parser());
 
 router.post('/', (req, res, next) => {
   context.parser.parse(req.body.input);

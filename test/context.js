@@ -5,9 +5,7 @@ const Context = require('../lib/context');
 const Parser = require('../lib/parser');
 const Matrix = require('../lib/matrix');
 
-const parser = new Parser();
-const matrix = new Matrix();
-const context = new Context(matrix, parser);
+const context = new Context(new Matrix(), new Parser());
 
 describe('context class', () => {
   it('should receives an input and returns results', () => {
