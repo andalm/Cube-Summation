@@ -56,6 +56,7 @@ describe('parser class', () => {
     }]);
   });
 
+
   it('should returns an error with a incorrect input', () => {
      parser.reset();
      assert.deepEqual(parser.testCases, []);
@@ -111,12 +112,44 @@ describe('parser class', () => {
   it('should returns an error with empty string', () => {
     assert.throws(() => {
       parser.parse('');
-     });
+    });
   });
 
   it('should returns an error with wrong type input', () => {
     assert.throws(() => {
       parser.parse(12354);
-     });
+    });
+  });
+
+  it('should returns an error, test cases groups incompletes', () => {
+    assert.throws(() => {
+      parser.parse(`2
+        4 5
+        UPDATE 2 2 2 4
+        QUERY 1 1 1 3 3 3
+        UPDATE 1 1 1 23
+        QUERY 2 2 2 4 4 4
+        QUERY 1 1 1 3 3 3`);
+      assert.deepEqual(parser.testCases, [{
+        N: 4,
+        M: 5,
+        operations: [{
+          command: 'UPDATE',
+          params: [2, 2, 2, 4]
+        },{
+          command: 'QUERY',
+          params: [1, 1, 1, 3, 3, 3]
+        },{
+          command: 'UPDATE',
+          params: [1, 1, 1, 23]
+        },{
+          command: 'QUERY',
+          params: [2, 2, 2, 4, 4, 4]
+        },{
+          command: 'QUERY',
+          params: [1, 1, 1, 3, 3, 3]
+        }],
+      }]);
+    });
   });
 });
