@@ -46,7 +46,7 @@ __Constrains__
 -109 <= W <= 109
 
 __Sample Input__
-
+```
 2
 4 5
 UPDATE 2 2 2 4
@@ -59,16 +59,16 @@ UPDATE 2 2 2 1
 QUERY 1 1 1 1 1 1
 QUERY 1 1 1 2 2 2
 QUERY 2 2 2 2 2 2
-
+```
 __Sample Output__
-
+```
 4
 4
 27
 0
 1
 1
-
+```
 ### How it works
 
 1. It needs node version >=6.9.1
