@@ -36,6 +36,7 @@ __Output Format__
 Print the result for each QUERY.
 
 __Constrains__
+```
 1 <= T <= 50
 1 <= N <= 100
 1 <= M <= 1000
@@ -44,6 +45,7 @@ __Constrains__
 1 <= z1 <= z2 <= N
 1 <= x,y,z <= N
 -109 <= W <= 109
+``
 
 __Sample Input__
 ```
