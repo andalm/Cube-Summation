@@ -1,7 +1,8 @@
 Cube Summation
 ===
 
-It's my solution for Cube Summation from hackerrank.
+It's my solution for Cube Summation from hackerrank. I have applied IoC and DI patterns for obtain a extendible and testeable solution.
+Also this project uses ECMAScript 2015 syntax and OOP programming.
 
 ### Problem Description
 
